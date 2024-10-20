@@ -16,11 +16,15 @@ p {
   height: 120px;
   justify-content: space-between;
   box-shadow: 0 0 1px 1px rgb(2, 203, 203);
-  background-color: azure;
+  background-color: white;
+  padding: 16px;
+  text-align: left;
 }
 
 .name {
   line-height: 1;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .elements {
@@ -46,7 +50,7 @@ p {
 .btn:hover {
   cursor: pointer;
   background-color: rgb(0, 181, 181);
-  color: #fafafa;
+  color: white;
   border: none;
 }
 

@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
@@ -52,22 +52,51 @@
   color: #888;
 }
 
-h1 {
-  text-align: left;
-  margin-left: 16px;
+button.btn-primary {
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px auto;
+  background-color: rgb(205, 158, 249);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: none;
+  box-shadow: 0 0 1px 2px rgb(163, 78, 241);
+  transition: background-color 2s ease, color 2s ease;
+  padding: auto;
+  color: black;
 }
 
-.title_header {
-  margin-left: 0;
-  font-size: 65px;
-  color: rgb(2, 158, 158);
+button.btn-primary:hover {
+  cursor: pointer;
+  background-color: orange;
+  text-shadow: none;
+  outline: none;
+}
+
+button.btn-primary:focus {
+  outline: none;
+  text-shadow: none;
+}
+
+input.input-bordered {
+  border: 1px solid teal;
+  border-radius: 6px;
+  box-shadow: 0 0 1px 1px rgb(2, 161, 161);
+  margin-bottom: 10px;
+  padding: 4px;
+  color: black;
+}
+
+input.input-bordered:focus {
+  border-color: turquoise;
+  box-shadow: none;
+  outline: none;
+}
+
+h1.text-5xl {
+  color: teal;
   text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.7), 6px 4px 0 rgba(0, 0, 0, 0.5),
-    3px 3px 0 rgba(0, 0, 0, 0.3);
-}
-
-.text_span {
-  font-size: 65px;
-  color: rgb(255, 174, 23);
-  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.9), 6px 4px 0 rgba(0, 0, 0, 0.5),
     3px 3px 0 rgba(0, 0, 0, 0.3);
 }

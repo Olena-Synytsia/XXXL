@@ -1,0 +1,19 @@
+.title_header {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 72px;
+  font-weight: 700;
+  color: teal;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.7), 6px 4px 0 rgba(0, 0, 0, 0.5),
+    3px 3px 0 rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+}
+
+.text_span {
+  font-size: 72px;
+  font-weight: 700;
+  color: turquoise;
+  text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.9), 6px 4px 0 rgba(0, 0, 0, 0.5),
+    3px 3px 0 rgba(0, 0, 0, 0.3);
+}

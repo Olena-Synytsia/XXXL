@@ -3,6 +3,14 @@
   padding: 20px;
 }
 
-nav a {
+.link {
   color: azure;
+}
+
+.link:hover {
+  color: turquoise;
+}
+
+.activeLink {
+  color: turquoise;
 }
