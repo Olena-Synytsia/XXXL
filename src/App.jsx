@@ -7,6 +7,7 @@ import { Suspense, lazy } from "react";
 
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute.jsx";
 import { RestrictedRoute } from "./components/RestrictedRoute/RestrictedRoute.jsx";
+import Loader from "./components/Loader/Loader.jsx";
 
 import "./App.css";
 
@@ -30,7 +31,13 @@ const App = () => {
 
   const isRefreshing = useSelector(selectIsRefreshing);
   return isRefreshing ? null : (
-    <Suspense fallback={<h2>Loading...</h2>}>
+    <Suspense
+      fallback={
+        <h2>
+          <Loader />
+        </h2>
+      }
+    >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
