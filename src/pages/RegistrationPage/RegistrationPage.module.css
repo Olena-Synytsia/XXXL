@@ -1,5 +1,5 @@
 .containerSingUp {
-  width: 100%;
+  width: 500px;
 }
 
 .titleSingUp {
@@ -41,8 +41,35 @@
   border: 1px solid teal;
   height: 40px;
   border-radius: 10px;
+  padding-left: 10px;
 }
 
 .textErrorSingUp {
   color: red;
+}
+
+.divSingUpButton {
+  text-align: center;
+}
+
+.singUpBtn {
+  width: 100px;
+  height: 40px;
+  border: 1px solid grey;
+  background-color: teal;
+  color: azure;
+}
+
+.inputWrap {
+}
+
+.spanSingUpIcons {
+  cursor: pointer;
+  opacity: 0.6;
+  zoom: 1;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  margin: 0 5px 0 -22px;
+  vertical-align: middle;
 }

@@ -48,14 +48,29 @@ const RegistrationPage = () => {
             <label className={s.labelSingUp}>
               <span className={s.spanSingUp}>Email</span>
             </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className={s.inputSingUp}
-              {...hookFormRegister("email")}
-            />
+            <div className={s.inputWrap}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className={s.inputSingUp}
+                {...hookFormRegister("email")}
+              />
+              <label className={s.labelSingUpIcons}>
+                <span className={s.spanSingUpIcons}>
+                  <svg
+                    class="faq-icon"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 32 32"
+                  >
+                    <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+
             {errors.email && (
-              <div className="text-red-500">{errors.email.message}</div>
+              <div className={s.textErrorSingUp}>{errors.email.message}</div>
             )}
           </div>
 
@@ -85,17 +100,23 @@ const RegistrationPage = () => {
               {...hookFormRegister("repeatPassword")}
             />
             {errors.repeatPassword && (
-              <div className="text-red-500">
+              <div className={s.textErrorSingUp}>
                 {errors.repeatPassword.message}
               </div>
             )}
           </div>
 
-          <div className="form-control mt-6">
-            <button type="submit" className="btn btn-primary">
+          <div className={s.divSingUpButton}>
+            <button type="submit" className={s.singUpBtn}>
               Sign Up
             </button>
           </div>
+          <svg class="faq-icon" width="44" height="44" viewBox="0 0 32 32">
+            <use href="/src/icons/symbol-defs.svg#icon-pie-chart-02"></use>
+          </svg>
+          <svg class="faq-icon" width="44" height="44" viewBox="0 0 32 32">
+            <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
+          </svg>
         </form>
       </div>
     </div>
