@@ -58,7 +58,7 @@ const RegistrationPage = () => {
               <label className={s.labelSingUpIcons}>
                 <span className={s.spanSingUpIcons}>
                   <svg
-                    class="faq-icon"
+                    className={s.spanSingUp}
                     width="20"
                     height="20"
                     viewBox="0 0 32 32"
@@ -78,12 +78,27 @@ const RegistrationPage = () => {
             <label className={s.labelSingUp}>
               <span className={s.spanSingUp}>Password</span>
             </label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              className={s.inputSingUp}
-              {...hookFormRegister("password")}
-            />
+            <div className={s.inputWrap}>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                className={s.inputSingUp}
+                {...hookFormRegister("password")}
+              />
+              <label className={s.labelSingUpIcons}>
+                <span className={s.spanSingUpIcons}>
+                  <svg
+                    className={s.spanSingUp}
+                    width="20"
+                    height="20"
+                    viewBox="0 0 32 32"
+                  >
+                    <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+
             {errors.password && (
               <div className={s.textErrorSingUp}>{errors.password.message}</div>
             )}
@@ -93,12 +108,27 @@ const RegistrationPage = () => {
             <label className={s.labelSingUp}>
               <span className={s.spanSingUp}>Repeat password</span>
             </label>
-            <input
-              type="password"
-              placeholder="Repeat password"
-              className={s.inputSingUp}
-              {...hookFormRegister("repeatPassword")}
-            />
+            <div className={s.inputWrap}>
+              <input
+                type="password"
+                placeholder="Repeat password"
+                className={s.inputSingUp}
+                {...hookFormRegister("repeatPassword")}
+              />
+              <label className={s.labelSingUpIcons}>
+                <span className={s.spanSingUpIcons}>
+                  <svg
+                    className={s.spanSingUp}
+                    width="20"
+                    height="20"
+                    viewBox="0 0 32 32"
+                  >
+                    <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
+                  </svg>
+                </span>
+              </label>
+            </div>
+
             {errors.repeatPassword && (
               <div className={s.textErrorSingUp}>
                 {errors.repeatPassword.message}
@@ -111,10 +141,20 @@ const RegistrationPage = () => {
               Sign Up
             </button>
           </div>
-          <svg class="faq-icon" width="44" height="44" viewBox="0 0 32 32">
+          <svg
+            className={s.spanSingUp}
+            width="44"
+            height="44"
+            viewBox="0 0 32 32"
+          >
             <use href="/src/icons/symbol-defs.svg#icon-pie-chart-02"></use>
           </svg>
-          <svg class="faq-icon" width="44" height="44" viewBox="0 0 32 32">
+          <svg
+            className={s.spanSingUp}
+            width="44"
+            height="44"
+            viewBox="0 0 32 32"
+          >
             <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
           </svg>
         </form>

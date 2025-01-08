@@ -34,6 +34,13 @@
 .labelSingUp {
 }
 
+.labelSingUpIcons {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
 .spanSingUp {
 }
 
@@ -42,6 +49,8 @@
   height: 40px;
   border-radius: 10px;
   padding-left: 10px;
+  padding-right: 40px;
+  width: 100%;
 }
 
 .textErrorSingUp {
@@ -61,15 +70,9 @@
 }
 
 .inputWrap {
+  position: relative;
+  width: 100%;
 }
 
 .spanSingUpIcons {
-  cursor: pointer;
-  opacity: 0.6;
-  zoom: 1;
-  display: inline-block;
-  height: 17px;
-  width: 17px;
-  margin: 0 5px 0 -22px;
-  vertical-align: middle;
 }
