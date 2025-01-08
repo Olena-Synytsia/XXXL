@@ -1,0 +1,48 @@
+.containerSingUp {
+  width: 100%;
+}
+
+.titleSingUp {
+  font-size: 32px;
+  text-align: left;
+  padding: 32px;
+}
+
+.formSingUp {
+  /* width: 400px; */
+}
+
+.formBody {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.textSingUp {
+  font-size: 20px;
+  text-align: left;
+}
+
+.formSingUpEl {
+  text-align: left;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelSingUp {
+}
+
+.spanSingUp {
+}
+
+.inputSingUp {
+  border: 1px solid teal;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.textErrorSingUp {
+  color: red;
+}
