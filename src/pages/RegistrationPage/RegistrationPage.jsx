@@ -38,27 +38,27 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div className={s.containerSingUp}>
-      <h1 className={s.titleSingUp}>AquaTrack</h1>
-      <div className={s.formSingUp}>
+    <div className={s.container}>
+      <h1 className={s.title}>AquaTrack</h1>
+      <div className={s.form}>
         <form onSubmit={handleSubmit(onSubmit)} className={s.formBody}>
-          <div className={s.textSingUp}>Sign Up</div>
+          <div className={s.titleSingUp}>Sign Up</div>
 
-          <div className={s.formSingUpEl}>
-            <label className={s.labelSingUp}>
-              <span className={s.spanSingUp}>Email</span>
+          <div className={s.formEl}>
+            <label className={s.label}>
+              <span className={s.span}>Email</span>
             </label>
             <div className={s.inputWrap}>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className={s.inputSingUp}
+                className={s.input}
                 {...hookFormRegister("email")}
               />
-              <label className={s.labelSingUpIcons}>
-                <span className={s.spanSingUpIcons}>
+              <label className={s.labelIcons}>
+                <span className={s.spanIcons}>
                   <svg
-                    className={s.spanSingUp}
+                    className={s.svgSingUp}
                     width="20"
                     height="20"
                     viewBox="0 0 32 32"
@@ -70,25 +70,25 @@ const RegistrationPage = () => {
             </div>
 
             {errors.email && (
-              <div className={s.textErrorSingUp}>{errors.email.message}</div>
+              <div className={s.textError}>{errors.email.message}</div>
             )}
           </div>
 
-          <div className={s.formSingUpEl}>
-            <label className={s.labelSingUp}>
-              <span className={s.spanSingUp}>Password</span>
+          <div className={s.formEl}>
+            <label className={s.label}>
+              <span className={s.span}>Password</span>
             </label>
             <div className={s.inputWrap}>
               <input
                 type="password"
                 placeholder="Enter your password"
-                className={s.inputSingUp}
+                className={s.input}
                 {...hookFormRegister("password")}
               />
-              <label className={s.labelSingUpIcons}>
-                <span className={s.spanSingUpIcons}>
+              <label className={s.labelIcons}>
+                <span className={s.spanIcons}>
                   <svg
-                    className={s.spanSingUp}
+                    className={s.svgSingUp}
                     width="20"
                     height="20"
                     viewBox="0 0 32 32"
@@ -100,25 +100,25 @@ const RegistrationPage = () => {
             </div>
 
             {errors.password && (
-              <div className={s.textErrorSingUp}>{errors.password.message}</div>
+              <div className={s.textError}>{errors.password.message}</div>
             )}
           </div>
 
-          <div className={s.formSingUpEl}>
-            <label className={s.labelSingUp}>
-              <span className={s.spanSingUp}>Repeat password</span>
+          <div className={s.formEl}>
+            <label className={s.label}>
+              <span className={s.span}>Repeat password</span>
             </label>
             <div className={s.inputWrap}>
               <input
                 type="password"
                 placeholder="Repeat password"
-                className={s.inputSingUp}
+                className={s.input}
                 {...hookFormRegister("repeatPassword")}
               />
-              <label className={s.labelSingUpIcons}>
-                <span className={s.spanSingUpIcons}>
+              <label className={s.labelIcons}>
+                <span className={s.spanIcons}>
                   <svg
-                    className={s.spanSingUp}
+                    className={s.svgSingUp}
                     width="20"
                     height="20"
                     viewBox="0 0 32 32"
@@ -130,33 +130,21 @@ const RegistrationPage = () => {
             </div>
 
             {errors.repeatPassword && (
-              <div className={s.textErrorSingUp}>
-                {errors.repeatPassword.message}
-              </div>
+              <div className={s.textError}>{errors.repeatPassword.message}</div>
             )}
           </div>
 
-          <div className={s.divSingUpButton}>
+          <div className={s.divBtn}>
             <button type="submit" className={s.singUpBtn}>
               Sign Up
             </button>
           </div>
-          <svg
-            className={s.spanSingUp}
-            width="44"
-            height="44"
-            viewBox="0 0 32 32"
-          >
-            <use href="/src/icons/symbol-defs.svg#icon-pie-chart-02"></use>
-          </svg>
-          <svg
-            className={s.spanSingUp}
-            width="44"
-            height="44"
-            viewBox="0 0 32 32"
-          >
-            <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
-          </svg>
+          <p className={s.text}>
+            Already have account?
+            <a href="" className={s.link}>
+              <span className={s.spanLink}>Sign In</span>
+            </a>
+          </p>
         </form>
       </div>
     </div>

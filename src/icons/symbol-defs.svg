@@ -4,7 +4,7 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.6" d="M22.666 4c0.679-0.663 1.609-1.072 2.634-1.072 2.083 0 3.772 1.689 3.772 3.772 0 1.025-0.409 1.955-1.073 2.635l-17.999 17.999-7.334 2 2-7.334 18-18z"></path>
 </symbol>
 <symbol id="icon-eye" viewBox="0 0 32 32">
-<path fill="#323F47" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.88" d="M1.333 16s5.333-10.667 14.667-10.667c9.333 0 14.666 10.667 14.666 10.667s-5.333 10.667-14.666 10.667c-9.334 0-14.667-10.667-14.667-10.667z"></path>
+<path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.88" d="M1.333 16s5.333-10.667 14.667-10.667c9.333 0 14.666 10.667 14.666 10.667s-5.333 10.667-14.666 10.667c-9.334 0-14.667-10.667-14.667-10.667z"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.88" d="M16 20c2.209 0 4-1.791 4-4s-1.791-4-4-4v0c-2.209 0-4 1.791-4 4s1.791 4 4 4v0z"></path>
 </symbol>
 <symbol id="icon-eye-off" viewBox="0 0 32 32">

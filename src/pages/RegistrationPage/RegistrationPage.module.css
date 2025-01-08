@@ -1,15 +1,14 @@
-.containerSingUp {
+.container {
   width: 500px;
 }
 
-.titleSingUp {
+.title {
   font-size: 32px;
   text-align: left;
   padding: 32px;
 }
 
-.formSingUp {
-  /* width: 400px; */
+.form {
 }
 
 .formBody {
@@ -19,32 +18,32 @@
   gap: 20px;
 }
 
-.textSingUp {
+.titleSingUp {
   font-size: 20px;
   text-align: left;
 }
 
-.formSingUpEl {
+.formEl {
   text-align: left;
-  width: 400px;
+  width: 500px;
   display: flex;
   flex-direction: column;
 }
 
-.labelSingUp {
+.label {
 }
 
-.labelSingUpIcons {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
+.svgSingUp {
+  fill: none;
+  stroke: #323f47;
 }
 
-.spanSingUp {
+.inputWrap {
+  position: relative;
+  width: 100%;
 }
 
-.inputSingUp {
+.input {
   border: 1px solid teal;
   height: 40px;
   border-radius: 10px;
@@ -53,11 +52,21 @@
   width: 100%;
 }
 
-.textErrorSingUp {
+.labelIcons {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.spanIcons {
+}
+
+.textError {
   color: red;
 }
 
-.divSingUpButton {
+.divBtn {
   text-align: center;
 }
 
@@ -69,10 +78,13 @@
   color: azure;
 }
 
-.inputWrap {
-  position: relative;
-  width: 100%;
+.text {
 }
 
-.spanSingUpIcons {
+.link {
+  text-decoration: underline;
+}
+
+.spanLink {
+  padding-left: 3px;
 }
