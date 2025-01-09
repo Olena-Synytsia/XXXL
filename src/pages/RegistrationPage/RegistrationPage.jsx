@@ -1,7 +1,8 @@
+import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 import { register } from "../../redux/auth/operations";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import s from "./RegistrationPage.module.css";
 
@@ -22,6 +23,8 @@ const schema = yup.object({
 
 const RegistrationPage = () => {
   const dispatch = useDispatch();
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [repeatPasswordVisible, setRepeatPasswordVisible] = useState(false);
 
   const {
     register: hookFormRegister,
@@ -55,18 +58,6 @@ const RegistrationPage = () => {
                 className={s.input}
                 {...hookFormRegister("email")}
               />
-              <label className={s.labelIcons}>
-                <span className={s.spanIcons}>
-                  <svg
-                    className={s.svgSingUp}
-                    width="20"
-                    height="20"
-                    viewBox="0 0 32 32"
-                  >
-                    <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
-                  </svg>
-                </span>
-              </label>
             </div>
 
             {errors.email && (
@@ -80,20 +71,27 @@ const RegistrationPage = () => {
             </label>
             <div className={s.inputWrap}>
               <input
-                type="password"
+                type={passwordVisible ? "text" : "password"}
                 placeholder="Enter your password"
                 className={s.input}
                 {...hookFormRegister("password")}
               />
               <label className={s.labelIcons}>
-                <span className={s.spanIcons}>
+                <span
+                  className={s.spanIcons}
+                  onClick={() => setPasswordVisible((prev) => !prev)}
+                >
                   <svg
                     className={s.svgSingUp}
                     width="20"
                     height="20"
                     viewBox="0 0 32 32"
                   >
-                    <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
+                    <use
+                      href={`/src/icons/symbol-defs.svg#${
+                        passwordVisible ? "icon-eye" : "icon-eye-off"
+                      }`}
+                    ></use>
                   </svg>
                 </span>
               </label>
@@ -110,20 +108,27 @@ const RegistrationPage = () => {
             </label>
             <div className={s.inputWrap}>
               <input
-                type="password"
+                type={repeatPasswordVisible ? "text" : "password"}
                 placeholder="Repeat password"
                 className={s.input}
                 {...hookFormRegister("repeatPassword")}
               />
               <label className={s.labelIcons}>
-                <span className={s.spanIcons}>
+                <span
+                  className={s.spanIcons}
+                  onClick={() => setRepeatPasswordVisible((prev) => !prev)}
+                >
                   <svg
                     className={s.svgSingUp}
                     width="20"
                     height="20"
                     viewBox="0 0 32 32"
                   >
-                    <use href="/src/icons/symbol-defs.svg#icon-eye"></use>
+                    <use
+                      href={`/src/icons/symbol-defs.svg#${
+                        repeatPasswordVisible ? "icon-eye" : "icon-eye-off"
+                      }`}
+                    ></use>
                   </svg>
                 </span>
               </label>
