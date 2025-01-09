@@ -1,8 +1,9 @@
-import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { register } from "../../redux/auth/operations";
+import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import s from "./RegistrationPage.module.css";
 
@@ -22,22 +23,27 @@ const schema = yup.object({
 });
 
 const RegistrationPage = () => {
+  const [notification, setNotification] = useState(null);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [repeatPasswordVisible, setRepeatPasswordVisible] = useState(false);
 
   const {
     register: hookFormRegister,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    dispatch(register(data));
-    reset();
+  const onSubmit = async (data) => {
+    try {
+      await dispatch(register(data)).unwrap();
+      navigate("/tracker");
+    } catch (error) {
+      setNotification(error.message);
+    }
   };
 
   return (
@@ -151,6 +157,7 @@ const RegistrationPage = () => {
             </a>
           </p>
         </form>
+        {notification && <div className={s.notification}>{notification}</div>}
       </div>
     </div>
   );
