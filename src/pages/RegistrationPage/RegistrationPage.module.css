@@ -96,6 +96,14 @@
   padding: 16px 40px 16px 16px;
 }
 
+input:focus {
+  outline: 1px solid #2f2f2f33;
+}
+
+.error {
+  outline: 1px solid #ef5050;
+}
+
 .labelIcons {
   position: absolute;
   top: 50%;
@@ -107,7 +115,7 @@
 }
 
 .textError {
-  color: red;
+  color: #ef5050;
 }
 
 .divBtn {

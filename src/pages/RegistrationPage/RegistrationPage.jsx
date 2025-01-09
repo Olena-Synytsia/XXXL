@@ -15,6 +15,7 @@ const schema = yup.object({
   password: yup
     .string()
     .min(6, "Password must be at least 6 characters")
+    .max(20, "Password must be at most 20 characters")
     .required("Password is required"),
   repeatPassword: yup
     .string()
@@ -62,7 +63,7 @@ const RegistrationPage = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className={s.input}
+                    className={`${s.input} ${errors.email ? s.error : ""}`}
                     {...hookFormRegister("email")}
                   />
                 </div>
@@ -80,7 +81,7 @@ const RegistrationPage = () => {
                   <input
                     type={passwordVisible ? "text" : "password"}
                     placeholder="Enter your password"
-                    className={s.input}
+                    className={`${s.input} ${errors.password ? s.error : ""}`}
                     {...hookFormRegister("password")}
                   />
                   <label className={s.labelIcons}>
@@ -117,7 +118,9 @@ const RegistrationPage = () => {
                   <input
                     type={repeatPasswordVisible ? "text" : "password"}
                     placeholder="Repeat password"
-                    className={s.input}
+                    className={`${s.input} ${
+                      errors.repeatPassword ? s.error : ""
+                    }`}
                     {...hookFormRegister("repeatPassword")}
                   />
                   <label className={s.labelIcons}>
