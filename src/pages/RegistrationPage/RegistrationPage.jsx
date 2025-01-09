@@ -47,117 +47,120 @@ const RegistrationPage = () => {
   };
 
   return (
-    <div className={s.container}>
-      <h1 className={s.title}>AquaTrack</h1>
-      <div className={s.form}>
-        <form onSubmit={handleSubmit(onSubmit)} className={s.formBody}>
+    <div className={s.section}>
+      <div className={s.container}>
+        <h1 className={s.logo}>AquaTrack</h1>
+        <div className={s.form}>
           <div className={s.titleSingUp}>Sign Up</div>
-
-          <div className={s.formEl}>
-            <label className={s.label}>
-              <span className={s.span}>Email</span>
-            </label>
-            <div className={s.inputWrap}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className={s.input}
-                {...hookFormRegister("email")}
-              />
-            </div>
-
-            {errors.email && (
-              <div className={s.textError}>{errors.email.message}</div>
-            )}
-          </div>
-
-          <div className={s.formEl}>
-            <label className={s.label}>
-              <span className={s.span}>Password</span>
-            </label>
-            <div className={s.inputWrap}>
-              <input
-                type={passwordVisible ? "text" : "password"}
-                placeholder="Enter your password"
-                className={s.input}
-                {...hookFormRegister("password")}
-              />
-              <label className={s.labelIcons}>
-                <span
-                  className={s.spanIcons}
-                  onClick={() => setPasswordVisible((prev) => !prev)}
-                >
-                  <svg
-                    className={s.svgSingUp}
-                    width="20"
-                    height="20"
-                    viewBox="0 0 32 32"
-                  >
-                    <use
-                      href={`/src/icons/symbol-defs.svg#${
-                        passwordVisible ? "icon-eye" : "icon-eye-off"
-                      }`}
-                    ></use>
-                  </svg>
-                </span>
+          <form onSubmit={handleSubmit(onSubmit)} className={s.formBody}>
+            <div className={s.formEl}>
+              <label className={s.label}>
+                <span className={s.span}>Email</span>
               </label>
+              <div className={s.inputWrap}>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className={s.input}
+                  {...hookFormRegister("email")}
+                />
+              </div>
+
+              {errors.email && (
+                <div className={s.textError}>{errors.email.message}</div>
+              )}
             </div>
 
-            {errors.password && (
-              <div className={s.textError}>{errors.password.message}</div>
-            )}
-          </div>
-
-          <div className={s.formEl}>
-            <label className={s.label}>
-              <span className={s.span}>Repeat password</span>
-            </label>
-            <div className={s.inputWrap}>
-              <input
-                type={repeatPasswordVisible ? "text" : "password"}
-                placeholder="Repeat password"
-                className={s.input}
-                {...hookFormRegister("repeatPassword")}
-              />
-              <label className={s.labelIcons}>
-                <span
-                  className={s.spanIcons}
-                  onClick={() => setRepeatPasswordVisible((prev) => !prev)}
-                >
-                  <svg
-                    className={s.svgSingUp}
-                    width="20"
-                    height="20"
-                    viewBox="0 0 32 32"
-                  >
-                    <use
-                      href={`/src/icons/symbol-defs.svg#${
-                        repeatPasswordVisible ? "icon-eye" : "icon-eye-off"
-                      }`}
-                    ></use>
-                  </svg>
-                </span>
+            <div className={s.formEl}>
+              <label className={s.label}>
+                <span className={s.span}>Password</span>
               </label>
+              <div className={s.inputWrap}>
+                <input
+                  type={passwordVisible ? "text" : "password"}
+                  placeholder="Enter your password"
+                  className={s.input}
+                  {...hookFormRegister("password")}
+                />
+                <label className={s.labelIcons}>
+                  <span
+                    className={s.spanIcons}
+                    onClick={() => setPasswordVisible((prev) => !prev)}
+                  >
+                    <svg
+                      className={s.svgSingUp}
+                      width="20"
+                      height="20"
+                      viewBox="0 0 32 32"
+                    >
+                      <use
+                        href={`/src/icons/symbol-defs.svg#${
+                          passwordVisible ? "icon-eye" : "icon-eye-off"
+                        }`}
+                      ></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+
+              {errors.password && (
+                <div className={s.textError}>{errors.password.message}</div>
+              )}
             </div>
 
-            {errors.repeatPassword && (
-              <div className={s.textError}>{errors.repeatPassword.message}</div>
-            )}
-          </div>
+            <div className={s.formEl}>
+              <label className={s.label}>
+                <span className={s.span}>Repeat password</span>
+              </label>
+              <div className={s.inputWrap}>
+                <input
+                  type={repeatPasswordVisible ? "text" : "password"}
+                  placeholder="Repeat password"
+                  className={s.input}
+                  {...hookFormRegister("repeatPassword")}
+                />
+                <label className={s.labelIcons}>
+                  <span
+                    className={s.spanIcons}
+                    onClick={() => setRepeatPasswordVisible((prev) => !prev)}
+                  >
+                    <svg
+                      className={s.svgSingUp}
+                      width="20"
+                      height="20"
+                      viewBox="0 0 32 32"
+                    >
+                      <use
+                        href={`/src/icons/symbol-defs.svg#${
+                          repeatPasswordVisible ? "icon-eye" : "icon-eye-off"
+                        }`}
+                      ></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
 
-          <div className={s.divBtn}>
-            <button type="submit" className={s.singUpBtn}>
-              Sign Up
-            </button>
-          </div>
-          <p className={s.text}>
-            Already have account?
-            <a href="" className={s.link}>
-              <span className={s.spanLink}>Sign In</span>
-            </a>
-          </p>
-        </form>
-        {notification && <div className={s.notification}>{notification}</div>}
+              {errors.repeatPassword && (
+                <div className={s.textError}>
+                  {errors.repeatPassword.message}
+                </div>
+              )}
+            </div>
+
+            <div className={s.divBtn}>
+              <button type="submit" className={s.singUpBtn}>
+                Sign Up
+              </button>
+            </div>
+            <p className={s.text}>
+              Already have account?
+              <a href="" className={s.link}>
+                <span className={s.spanLink}>Sign In</span>
+              </a>
+            </p>
+          </form>
+          {notification && <div className={s.notification}>{notification}</div>}
+        </div>
       </div>
     </div>
   );
