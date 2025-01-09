@@ -186,7 +186,7 @@
   }
 
   .form {
-    width: 100%;
+    width: 436px;
     height: 506px;
     margin: 171px 102px 195px 102px;
   }
@@ -196,14 +196,20 @@
   }
 
   .titleSingUp {
-    font-family: Poppins;
     font-size: 36px;
-    font-weight: 700;
     line-height: 38px;
+  }
+
+  .span {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .input {
+    font-size: 16px;
+    line-height: 24px;
     letter-spacing: -0.01em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    height: 56px;
   }
 }
 
