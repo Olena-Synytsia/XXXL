@@ -168,6 +168,28 @@ const RegistrationPage = () => {
   );
 };
 
+// const RegisterPage = () => {
+//   return (
+//     <>
+//       <h1>RegisterPage</h1>
+//       <SignUpPage />
+//       <div className={s.advantagesSection}>
+//         <AdvantagesSection />
+//       </div>
+//     </>
+//   );
+// };
+
+// .advantagesSection {
+//   display: none;
+// }
+
+// @media screen and (min-width: 1440px) {
+// .advantagesSection {
+//   display: block;
+// }
+// }
+
 export default RegistrationPage;
 
 // import { Field, Form, Formik } from "formik";

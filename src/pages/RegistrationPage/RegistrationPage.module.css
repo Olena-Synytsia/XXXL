@@ -184,6 +184,10 @@
     background-color: #f0eff4;
   }
 
+  .logo {
+    margin-bottom: 0;
+  }
+
   .form {
     width: 436px;
     height: 506px;
@@ -232,15 +236,12 @@
 }
 
 @media screen and (min-width: 1440px) {
-  /* .section {
-  width: 343px;
-  margin: 16px;
-}
+  .section {
+    width: 672px;
+    margin: 0;
+  }
 
-.container {
-  width: 100%;
-  padding: 24px 16px 170px 16px;
-  border-radius: 30px;
-  background-color: #f0eff4;
-} */
+  .form {
+    margin: 74px 86px 100px 86px;
+  }
 }
