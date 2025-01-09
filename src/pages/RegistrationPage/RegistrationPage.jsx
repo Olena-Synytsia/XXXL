@@ -51,7 +51,7 @@ const RegistrationPage = () => {
       <div className={s.container}>
         <h1 className={s.logo}>AquaTrack</h1>
         <div className={s.form}>
-          <div className={s.titleSingUp}>Sign Up</div>
+          <h2 className={s.titleSingUp}>Sign Up</h2>
           <form onSubmit={handleSubmit(onSubmit)} className={s.formBody}>
             <div className={s.wrapForm}>
               <div className={s.formEl}>
